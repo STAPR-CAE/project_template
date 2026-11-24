@@ -1,0 +1,1 @@
+uv pip install -r "%~dp0requirements_dev.txt" --no-deps

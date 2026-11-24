@@ -1,59 +1,63 @@
-# __package_name__
+# Package template
 
-__package_description__
+Template for a Python package.
 
 ## Development
 
-### Environment Setup
+### Environment Setup - uv
 
 ```bash
 uv venv
 uv sync
 .venv\Scripts\activate
+
+# Sync development group dependencies
+uv sync --dev
 ```
-
-[official installation guide for `uv`](https://github.com/astral-sh/uv#installation)
-
-## Development Tools
-
-some short text here
 
 ### Pre-commit
 
 ```bash
 # Update pre-commit hooks
-pre-commit autoupdate 
-# Install pre-commit hooks 
+pre-commit autoupdate
+# Install pre-commit hooks
 pre-commit install
 # Run pre-commit hooks on all files without committing
 pre-commit run --all-files
 ```
 
-### Pytest
+### Testing - Pytest
 
 ```bash
 # Run all tests
 pytest
-# Run tests in a specific file
-pytest path/to/test_file.py
-# Run a specific test function
-pytest path/to/test_file.py::test_function
+# Run tests matching a specific pattern
+pytest -k "test_pattern"
 ```
 
-### Ruff
+### Linting and Formatting - Ruff
 
 ```bash
 # Check for linting errors and formatting issues
 ruff check .
-# Format code
-ruff format .
 # Fix linting errors automatically (use with caution)
 ruff check . --fix
+
+# Format code
+ruff format .
 ```
 
-### Mypy
+### Type Checking - BasedPyright
 
 ```bash
 # Run type checking
-mypy .
+basedpyright .
 ```
+
+### Resources
+
+- [UV](https://docs.astral.sh/uv/)
+- [Pre-Commit](https://pre-commit.com/)
+- [PyTest](https://docs.pytest.org/en/stable/)
+- [Ruff](https://docs.astral.sh/ruff/)
+- [BasedPyright](https://docs.basedpyright.com/latest/)

@@ -1,0 +1,1 @@
+bcs_py -m pip install -r "%~dp0requirements_dev.txt" --no-deps

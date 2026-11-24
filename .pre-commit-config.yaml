@@ -1,17 +1,17 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
       - id: check-added-large-files
 
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.15.0
+  - repo: https://github.com/DetachHead/basedpyright-pre-commit-mirror
+    rev: 1.40.2 # (use the latest stable tag matching your needs)
     hooks:
-      - id: mypy
+      - id: basedpyright
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.11.6
+    rev: v0.16.10
     hooks:
       - id: ruff
         args:
